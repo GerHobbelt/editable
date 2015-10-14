@@ -1076,7 +1076,7 @@ Editable.prototype.onchange = function(e){
   var self = this;
   autosave(function(){
     var buf = new String(self.toString());
-    buf.at = position(el);
+    buf.at = position(self.el);
     self.history.add(buf);
     return self.emit('change', e);
   });
